@@ -12,8 +12,6 @@ Before running the application, ensure you have the following installed:
 * **Docker Compose** (v2.x or later) – Comes bundled with modern Docker Desktop installations
 * **Git** (optional, for cloning the repository)
 
-This application runs entirely inside Docker containers; no Node.js, React, or MySQL installations are needed on your host machine.
-
 ---
 
 ## **Application Description**
