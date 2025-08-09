@@ -8,7 +8,7 @@ Here’s a **complete and accurate README.md** for your “Bank Web App” that 
 
 Before running the application, ensure you have the following installed:
 
-* **Docker** (version 20.10 or later) – [Install Guide](https://docs.docker.com/get-docker/)
+* **Docker** (version 20.10 or later)
 * **Docker Compose** (v2.x or later) – Comes bundled with modern Docker Desktop installations
 * **Git** (optional, for cloning the repository)
 
