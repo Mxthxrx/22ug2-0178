@@ -1,4 +1,5 @@
 version: '3.3'
+
 services:
   frontend:
     build: ./frontend
@@ -13,20 +14,23 @@ services:
     build: ./backend
     ports:
       - "5001:5001"
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASS: rootpass
+      DB_NAME: bankdb
     depends_on:
-      - mysql_db
+      - db
     networks:
       - bank-network
 
-  mysql_db:
+  db:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: bankdb
     volumes:
-      - mysql_data:/var/lib/mysql
-      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - "3306:3306"
+      - bank-db-data:/var/lib/mysql
     networks:
       - bank-network
 
@@ -35,5 +39,4 @@ networks:
     driver: bridge
 
 volumes:
-  mysql_data:
-
+  bank-db-data:
